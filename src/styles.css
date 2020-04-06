@@ -24,7 +24,6 @@ main {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   box-shadow: 4px 4px 10px gray;
 }
@@ -40,7 +39,7 @@ main form {
   justify-content: center;
 }
 
-main form input {
+main input {
   height: 30px;
   width: 20%;
   font-size: large;
@@ -50,9 +49,65 @@ main form input {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.theDiv {
+#theDiv {
   background-color: dodgerblue;
   border: solid 2px black;
   height: 300px;
   width: 300px;
+}
+
+.css-container {
+  margin: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.css-container input {
+  width: 100%;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 15px;
+}
+
+.css-container button {
+  height: 34px;
+}
+
+.css-container {
+  position: relative;
+}
+
+.css-container .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.css-container .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.css-container:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
